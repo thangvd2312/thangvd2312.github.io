@@ -2,7 +2,7 @@ baseURL = 'https://thangvd2312.github.io/'
 relativeURLs = true
 uglyURLs = false
 languageCode = 'vn-VN'
-title = 'jerry'
+title = "jerry's notes"
 theme = "archie"
 
 
