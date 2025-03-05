@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Optimistic Lock vs Pessimistic Lock - Blog GITHUB</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Optimistic Lock vs Pessimistic Lock - jerry</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Optimistic Lock vs Pessimistic Lock: Sự khác biệt và ứng dụng thực tế
 Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán: Optimistic Lock và Pessimistic Lock. Mỗi loại có cách tiếp cận khác nhau trong việc xử lý xung đột dữ liệu. Bài viết này sẽ phân tích chi tiết hai loại lock này, đồng thời giải thích hai dạng của Pessimistic Lock là Shared Lock và Exclusive Lock." />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="http://localhost:1313/posts/compare-optimistic-pessimistic/">
-  <meta property="og:site_name" content="Blog GITHUB">
+  <meta property="og:site_name" content="jerry">
   <meta property="og:title" content="Optimistic Lock vs Pessimistic Lock">
   <meta property="og:description" content="Optimistic Lock vs Pessimistic Lock: Sự khác biệt và ứng dụng thực tế Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán: Optimistic Lock và Pessimistic Lock. Mỗi loại có cách tiếp cận khác nhau trong việc xử lý xung đột dữ liệu. Bài viết này sẽ phân tích chi tiết hai loại lock này, đồng thời giải thích hai dạng của Pessimistic Lock là Shared Lock và Exclusive Lock.">
   <meta property="og:locale" content="vn_VN">
@@ -14,6 +14,9 @@ Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai ch
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2020-03-04T09:47:31+07:00">
     <meta property="article:modified_time" content="2020-03-04T09:47:31+07:00">
+    <meta property="article:tag" content="Optimistic Lock">
+    <meta property="article:tag" content="Pessimistic Lock">
+    <meta property="article:tag" content="Database">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Optimistic Lock vs Pessimistic Lock">
@@ -28,7 +31,7 @@ Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai ch
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="http://localhost:1313/">Blog GITHUB</a>
+		<a href="http://localhost:1313/">jerry</a>
 	</div>
 	<nav>
 		
@@ -191,6 +194,18 @@ Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai ch
         <div class="post-tags">
           
           
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="../../tags/optimistic-lock">Optimistic Lock</a></li>
+              
+              <li><a href="../../tags/pessimistic-lock">Pessimistic Lock</a></li>
+              
+              <li><a href="../../tags/database">Database</a></li>
+              
+            </ul>
+          </nav>
+          
           
         </div>
       </div>
@@ -202,7 +217,13 @@ Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai ch
     </article>
 </main>
 <footer>
-  <div style="display:flex"></div>
+  <div style="display:flex"><a class="soc" href="https://www.facebook.com/vu.van.thang.810982/" rel="me" title="Facebook"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#facebook" />
+</svg></a><a class="border"></a><a class="soc" href="https://github.com/thangvd2312/" rel="me" title="GitHub"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a><a class="soc" href="https://www.linkedin.com/in/thang-vu-b916b6119/" rel="me" title="Linkedin"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#linkedin" />
+</svg></a><a class="border"></a></div>
   <div class="footer-info">
     2025  <a
       href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>

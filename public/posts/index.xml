@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Blog GITHUB</title>
+    <title>Posts on jerry</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Blog GITHUB</description>
+    <description>Recent content in Posts on jerry</description>
     <generator>Hugo</generator>
     <language>vn-VN</language>
     <lastBuildDate>Wed, 04 Mar 2020 09:47:31 +0700</lastBuildDate>

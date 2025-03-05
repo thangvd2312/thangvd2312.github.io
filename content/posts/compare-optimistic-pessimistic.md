@@ -2,6 +2,7 @@
 date = '2020-03-04T09:47:31+07:00'
 draft = false
 title = 'Optimistic Lock vs Pessimistic Lock'
+tags = ['Optimistic Lock', 'Pessimistic Lock', 'Database']
 +++
 
 # Optimistic Lock vs Pessimistic Lock: Sự khác biệt và ứng dụng thực tế
