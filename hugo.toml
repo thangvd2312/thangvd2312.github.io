@@ -1,4 +1,6 @@
 baseURL = 'https://thangvd2312.github.io/'
+relativeURLs = true
+uglyURLs = false
 languageCode = 'vn-VN'
 title = 'Blog GITHUB'
 theme = "archie"
