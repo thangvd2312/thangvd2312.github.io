@@ -1,0 +1,4 @@
+baseURL = 'http://thangvd2312.github.io/'
+languageCode = 'vn-VN'
+title = 'Blog GITHUB'
+theme = "archie"
