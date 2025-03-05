@@ -6,6 +6,7 @@ title = "jerry's notes"
 theme = "archie"
 
 
+
 [[params.social]]
 name = "Facebook"
 icon = "facebook"
@@ -20,3 +21,24 @@ url = "https://github.com/thangvd2312/"
 name = "Linkedin"
 icon = "linkedin"
 url = "https://www.linkedin.com/in/thang-vu-b916b6119/"
+
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
