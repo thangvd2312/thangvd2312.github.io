@@ -1,27 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jerry's notes</title><link>https://thangvd2312.github.io/</link><description>Recent content on jerry's notes</description><generator>Hugo</generator><language>vn-VN</language><lastBuildDate>Wed, 04 Mar 2020 09:47:31 +0700</lastBuildDate><atom:link href="https://thangvd2312.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Optimistic Lock vs Pessimistic Lock</title><link>https://thangvd2312.github.io/posts/compare-optimistic-pessimistic/</link><pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate><guid>https://thangvd2312.github.io/posts/compare-optimistic-pessimistic/</guid><description>&lt;h1 id="optimistic-lock-vs-pessimistic-lock-sự-khác-biệt-và-ứng-dụng-thực-tế">Optimistic Lock vs Pessimistic Lock: Sự khác biệt và ứng dụng thực tế&lt;/h1>
-&lt;p>Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán: &lt;strong>Optimistic Lock&lt;/strong> và &lt;strong>Pessimistic Lock&lt;/strong>. Mỗi loại có cách tiếp cận khác nhau trong việc xử lý xung đột dữ liệu. Bài viết này sẽ phân tích chi tiết hai loại lock này, đồng thời giải thích hai dạng của &lt;strong>Pessimistic Lock&lt;/strong> là &lt;strong>Shared Lock&lt;/strong> và &lt;strong>Exclusive Lock&lt;/strong>.&lt;/p></description></item><item><title/><link>https://thangvd2312.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thangvd2312.github.io/about/</guid><description>&lt;h1 id="-developer-profile">📌 Developer Profile&lt;/h1>
-&lt;p>&lt;img src="./bg.jpg" alt="Background">&lt;/p>
-&lt;h2 id="-thông-tin-cá-nhân">👤 Thông tin cá nhân&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Họ và tên:&lt;/strong> Vũ Văn Thắng&lt;/li>
-&lt;li>&lt;strong>Email:&lt;/strong> &lt;a href="mailto:thangvd2312@gmail.com">thangvd2312@gmail.com&lt;/a>&lt;/li>
-&lt;li>&lt;strong>GitHub:&lt;/strong> &lt;a href="https://github.com/thangvd2312">github.com/thangvd2312&lt;/a>&lt;/li>
-&lt;li>&lt;strong>LinkedIn:&lt;/strong> &lt;a href="https://www.linkedin.com/in/thang-vu-b916b6119/">linkedin.com/in/thang-vu-b916b6119&lt;/a>&lt;/li>
-&lt;li>&lt;strong>Website:&lt;/strong> &lt;a href="http://thangvd2312.github.io">http://thangvd2312.github.io&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="-kỹ-năng">🚀 Kỹ năng&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Ngôn ngữ lập trình:&lt;/strong> JavaScript, TypeScript, Python, Go&lt;/li>
-&lt;li>&lt;strong>Frameworks:&lt;/strong> NestJS, Express, Java, React.js, Vue, Svelte, Next.js&lt;/li>
-&lt;li>&lt;strong>Cơ sở dữ liệu:&lt;/strong> MySQL, PostgreSQL, MongoDB&lt;/li>
-&lt;li>&lt;strong>DevOps:&lt;/strong> Docker, AWS&lt;/li>
-&lt;li>&lt;strong>Khác:&lt;/strong> Microservices, Kafka&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="-kinh-nghiệm-làm-việc">💼 Kinh nghiệm làm việc&lt;/h2>
-&lt;hr>
-&lt;h2 id="-dự-án-nổi-bật">📜 Dự án nổi bật&lt;/h2>
-&lt;hr>
-&lt;h2 id="-liên-hệ">📞 Liên hệ&lt;/h2>
-&lt;p>Nếu bạn quan tâm đến profile của tôi, hãy liên hệ qua email hoặc LinkedIn! 😊&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>jerry's notes</title><link>https://thangvd2312.github.io/</link><description>Recent content on jerry's notes</description><generator>Hugo</generator><language>vn-VN</language><lastBuildDate>Mon, 10 Mar 2025 07:15:58 +0000</lastBuildDate><atom:link href="https://thangvd2312.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CAP Theorem</title><link>https://thangvd2312.github.io/posts/cap-theorem/</link><pubDate>Mon, 10 Mar 2025 07:15:58 +0000</pubDate><guid>https://thangvd2312.github.io/posts/cap-theorem/</guid><description>CAP trong hệ thống phân tán</description></item><item><title>MySQL Binlog và Thứ Tự Hoạt Động Transaction</title><link>https://thangvd2312.github.io/posts/binlog-mysql/</link><pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate><guid>https://thangvd2312.github.io/posts/binlog-mysql/</guid><description>Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery.</description></item><item><title>Optimistic Lock vs Pessimistic Lock</title><link>https://thangvd2312.github.io/posts/compare-optimistic-pessimistic/</link><pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate><guid>https://thangvd2312.github.io/posts/compare-optimistic-pessimistic/</guid><description>Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán</description></item><item><title/><link>https://thangvd2312.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thangvd2312.github.io/about/</guid><description>&lt;h1 id="-developer-profile"&gt;📌 Developer Profile&lt;/h1&gt;
+&lt;p&gt;&lt;img src="./bg.jpg" alt="Background"&gt;&lt;/p&gt;
+&lt;h2 id="-thông-tin-cá-nhân"&gt;👤 Thông tin cá nhân&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Họ và tên:&lt;/strong&gt; Vũ Văn Thắng&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href="mailto:thangvd2312@gmail.com"&gt;thangvd2312@gmail.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href="https://github.com/thangvd2312"&gt;github.com/thangvd2312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href="https://www.linkedin.com/in/thang-vu-b916b6119/"&gt;linkedin.com/in/thang-vu-b916b6119&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href="http://thangvd2312.github.io"&gt;http://thangvd2312.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-kỹ-năng"&gt;🚀 Kỹ năng&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Ngôn ngữ lập trình:&lt;/strong&gt; JavaScript, TypeScript, Python, Go&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; NestJS, Express, Java, React.js, Vue, Svelte, Next.js&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cơ sở dữ liệu:&lt;/strong&gt; MySQL, PostgreSQL, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DevOps:&lt;/strong&gt; Docker, AWS&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Khác:&lt;/strong&gt; Microservices, Kafka&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="-kinh-nghiệm-làm-việc"&gt;💼 Kinh nghiệm làm việc&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id="-dự-án-nổi-bật"&gt;📜 Dự án nổi bật&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id="-liên-hệ"&gt;📞 Liên hệ&lt;/h2&gt;
+&lt;p&gt;Nếu bạn quan tâm đến profile của tôi, hãy liên hệ qua email hoặc LinkedIn! 😊&lt;/p&gt;</description></item><item><title/><link>https://thangvd2312.github.io/posts/section-1-node-js-backend-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://thangvd2312.github.io/posts/section-1-node-js-backend-architecture/</guid><description/></item></channel></rss>
