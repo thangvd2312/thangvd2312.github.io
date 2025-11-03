@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on jerry&#39;s notes</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on jerry&#39;s notes</description>
+    <generator>Hugo</generator>
+    <language>vn-VN</language>
+    <lastBuildDate>Mon, 10 Mar 2025 07:15:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CAP Theorem</title>
+      <link>http://localhost:1313/posts/cap-theorem/</link>
+      <pubDate>Mon, 10 Mar 2025 07:15:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cap-theorem/</guid>
+      <description>CAP trong hệ thống phân tán</description>
+    </item>
+    <item>
+      <title>MySQL Binlog và Thứ Tự Hoạt Động Transaction</title>
+      <link>http://localhost:1313/posts/binlog-mysql/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/binlog-mysql/</guid>
+      <description>Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery.</description>
+    </item>
+    <item>
+      <title>Optimistic Lock vs Pessimistic Lock</title>
+      <link>http://localhost:1313/posts/compare-optimistic-pessimistic/</link>
+      <pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate>
+      <guid>http://localhost:1313/posts/compare-optimistic-pessimistic/</guid>
+      <description>Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/section-1-node-js-backend-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/section-1-node-js-backend-architecture/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on jerry&#39;s notes</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on jerry&#39;s notes</description>
+    <generator>Hugo</generator>
+    <language>vn-VN</language>
+    <lastBuildDate>Mon, 10 Mar 2025 07:15:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Mon, 10 Mar 2025 07:15:58 +0000</pubDate>
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>System</title>
+      <link>http://localhost:1313/tags/system/</link>
+      <pubDate>Mon, 10 Mar 2025 07:15:58 +0000</pubDate>
+      <guid>http://localhost:1313/tags/system/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Binlog</title>
+      <link>http://localhost:1313/tags/binlog/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/binlog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/tags/mysql/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimistic Lock</title>
+      <link>http://localhost:1313/tags/optimistic-lock/</link>
+      <pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate>
+      <guid>http://localhost:1313/tags/optimistic-lock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pessimistic Lock</title>
+      <link>http://localhost:1313/tags/pessimistic-lock/</link>
+      <pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate>
+      <guid>http://localhost:1313/tags/pessimistic-lock/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

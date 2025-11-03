@@ -5,7 +5,12 @@ languageCode = 'vn-VN'
 title = "jerry's notes"
 theme = "archie"
 
-
+[params]
+  mode="toggle"
+  useCDN=true
+  customcss = ["css/custom.css"]
+  mathjax = false
+  katex = true
 
 [[params.social]]
 name = "Facebook"

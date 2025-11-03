@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jerry&#39;s notes</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on jerry&#39;s notes</description>
+    <generator>Hugo</generator>
+    <language>vn-VN</language>
+    <lastBuildDate>Mon, 10 Mar 2025 07:15:58 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CAP Theorem</title>
+      <link>http://localhost:1313/posts/cap-theorem/</link>
+      <pubDate>Mon, 10 Mar 2025 07:15:58 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cap-theorem/</guid>
+      <description>CAP trong hệ thống phân tán</description>
+    </item>
+    <item>
+      <title>MySQL Binlog và Thứ Tự Hoạt Động Transaction</title>
+      <link>http://localhost:1313/posts/binlog-mysql/</link>
+      <pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/binlog-mysql/</guid>
+      <description>Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery.</description>
+    </item>
+    <item>
+      <title>Optimistic Lock vs Pessimistic Lock</title>
+      <link>http://localhost:1313/posts/compare-optimistic-pessimistic/</link>
+      <pubDate>Wed, 04 Mar 2020 09:47:31 +0700</pubDate>
+      <guid>http://localhost:1313/posts/compare-optimistic-pessimistic/</guid>
+      <description>Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;-developer-profile&#34;&gt;📌 Developer Profile&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;./bg.jpg&#34; alt=&#34;Background&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;-thông-tin-cá-nhân&#34;&gt;👤 Thông tin cá nhân&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Họ và tên:&lt;/strong&gt; Vũ Văn Thắng&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:thangvd2312@gmail.com&#34;&gt;thangvd2312@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub:&lt;/strong&gt; &lt;a href=&#34;https://github.com/thangvd2312&#34;&gt;github.com/thangvd2312&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/thang-vu-b916b6119/&#34;&gt;linkedin.com/in/thang-vu-b916b6119&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href=&#34;http://thangvd2312.github.io&#34;&gt;http://thangvd2312.github.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-kỹ-năng&#34;&gt;🚀 Kỹ năng&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ngôn ngữ lập trình:&lt;/strong&gt; JavaScript, TypeScript, Python, Go&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Frameworks:&lt;/strong&gt; NestJS, Express, Java, React.js, Vue, Svelte, Next.js&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Cơ sở dữ liệu:&lt;/strong&gt; MySQL, PostgreSQL, MongoDB&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;DevOps:&lt;/strong&gt; Docker, AWS&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Khác:&lt;/strong&gt; Microservices, Kafka&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-kinh-nghiệm-làm-việc&#34;&gt;💼 Kinh nghiệm làm việc&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-dự-án-nổi-bật&#34;&gt;📜 Dự án nổi bật&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-liên-hệ&#34;&gt;📞 Liên hệ&lt;/h2&gt;&#xA;&lt;p&gt;Nếu bạn quan tâm đến profile của tôi, hãy liên hệ qua email hoặc LinkedIn! 😊&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/section-1-node-js-backend-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/section-1-node-js-backend-architecture/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

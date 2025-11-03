@@ -2,7 +2,7 @@
 date = '2020-03-04T09:47:31+07:00'
 draft = false
 title = 'Optimistic Lock vs Pessimistic Lock'
-summary = ""
+summary = "Trong quản lý giao dịch và cạnh tranh truy cập dữ liệu, có hai chiến lược chính để kiểm soát tính nhất quán"
 tags = ['Optimistic Lock', 'Pessimistic Lock', 'Database']
 +++
 

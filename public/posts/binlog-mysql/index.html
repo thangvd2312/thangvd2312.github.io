@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MySQL Binlog và Thứ Tự Hoạt Động Transaction - jerry&#39;s notes</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/binlog-mysql/">
+  <meta property="og:site_name" content="jerry&#39;s notes">
+  <meta property="og:title" content="MySQL Binlog và Thứ Tự Hoạt Động Transaction">
+  <meta property="og:description" content="Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery.">
+  <meta property="og:locale" content="vn_VN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-03-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-04T00:00:00+00:00">
+    <meta property="article:tag" content="Database">
+    <meta property="article:tag" content="MySQL">
+    <meta property="article:tag" content="Binlog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MySQL Binlog và Thứ Tự Hoạt Động Transaction">
+  <meta name="twitter:description" content="Trong MySQL, Binlog là file ghi lại mọi thay đổi dữ liệu trong DB dưới dạng sự kiện (event). Nó có hai vai trò chính: Replication và Point-in-Time Recovery.">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css"  disabled /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+		</script>
+		
+		
+		<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom.378b5030e595fecfa2d92d78b23726a9c0914ee9980291dcdbbb79ee39f02f52.css">
+		
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">jerry&#39;s notes</a>
+	</div>
+	<nav>
+		
+		<a href="../../">Home</a>
+		
+		<a href="../../posts">All posts</a>
+		
+		<a href="../../about">About</a>
+		
+		<a href="../../tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"><svg class="feather">
+   <use href="https://unpkg.com/feather-icons@4.29.2/dist/feather-sprite.svg#sun" />
+</svg></span>
+		<script src="http://localhost:1313/js/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">MySQL Binlog và Thứ Tự Hoạt Động Transaction</h1>
+          <div class="meta">Posted on Mar 4, 2024</div>
+        </div>
+        
+        <section class="body">
+          <h1 id="-mysql-binlog-và-thứ-tự-hoạt-động-transaction">🧩 MySQL Binlog và Thứ Tự Hoạt Động Transaction</h1>
+<h2 id="-1-binlog-là-gì">📦 1️⃣ Binlog là gì?</h2>
+<p><strong>Binlog (Binary Log)</strong> là file ghi lại <strong>mọi thay đổi dữ liệu</strong> trong MySQL dưới dạng sự kiện (event).<br>
+Ví dụ: mỗi câu lệnh <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>CREATE TABLE</code>&hellip; đều được ghi vào binlog.</p>
+<h3 id="-mục-đích-chính-của-binlog">🎯 Mục đích chính của Binlog</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Mục tiêu</th>
+          <th>Ý nghĩa</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Replication (Master–Slave)</strong></td>
+          <td>Replica đọc binlog của master để “replay” lại các thay đổi và đồng bộ dữ liệu</td>
+      </tr>
+      <tr>
+          <td><strong>Backup / Point-in-Time Recovery (PITR)</strong></td>
+          <td>Có thể phục hồi dữ liệu đến thời điểm cụ thể bằng cách chạy lại binlog</td>
+      </tr>
+      <tr>
+          <td><strong>Theo dõi thay đổi dữ liệu (audit)</strong></td>
+          <td>Dễ dàng kiểm tra ai đã thay đổi gì trong DB</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="-tác-dụng-trong-replication">⚙️ Tác dụng trong Replication</h3>
+<ul>
+<li>Master ghi các sự kiện thay đổi dữ liệu vào binlog.</li>
+<li>Replica kết nối đến master và đọc binlog qua thread <code>I/O</code>.</li>
+<li>Replica lưu binlog này thành file <strong>relay log</strong> và “replay” nó qua thread <code>SQL</code>.</li>
+</ul>
+<p>👉 Nhờ vậy, Replica có thể cập nhật dữ liệu <strong>y hệt Master</strong>, ngay cả khi chúng ở trên hai server khác nhau.</p>
+<hr>
+<h2 id="-2-thứ-tự-chạy-một-câu-sql-trong-mysql">⚙️ 2️⃣ Thứ tự chạy một câu SQL trong MySQL</h2>
+<p>Giả sử bạn chạy lệnh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> users <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Thang&#39;</span>);
+</span></span></code></pre></div><h3 id="bên-trong-mysql-sẽ-diễn-ra-như-sau">Bên trong MySQL sẽ diễn ra như sau:</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Bước</th>
+          <th>Mô tả</th>
+          <th>Ghi log nào</th>
+          <th>Ghi chú</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1️⃣</td>
+          <td>Câu SQL được Parser và Optimize</td>
+          <td>—</td>
+          <td>Tạo plan để thực thi</td>
+      </tr>
+      <tr>
+          <td>2️⃣</td>
+          <td>Ghi thay đổi vào bộ nhớ (Buffer Pool)</td>
+          <td>—</td>
+          <td>Dữ liệu chỉ ở RAM</td>
+      </tr>
+      <tr>
+          <td>3️⃣</td>
+          <td>Ghi <strong>Redo Log</strong> với trạng thái <em>prepare</em></td>
+          <td>🧱 Redo Log</td>
+          <td>InnoDB lưu thay đổi vật lý, chuẩn bị commit</td>
+      </tr>
+      <tr>
+          <td>4️⃣</td>
+          <td>Ghi <strong>Binlog</strong> với nội dung logic (INSERT/UPDATE/DELETE)</td>
+          <td>📦 Binlog</td>
+          <td>Dữ liệu phục vụ replication và backup</td>
+      </tr>
+      <tr>
+          <td>5️⃣</td>
+          <td>Đánh dấu <strong>Redo Log → commit</strong></td>
+          <td>🧱 Redo Log</td>
+          <td>Transaction chính thức hoàn tất</td>
+      </tr>
+      <tr>
+          <td>6️⃣</td>
+          <td>Trả kết quả <code>Query OK</code> cho client</td>
+          <td>—</td>
+          <td>Dữ liệu an toàn, có thể sync sang replica</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-3-vị-trí-của-binlog--redo-log-trong-quá-trình">🔍 3️⃣ Vị trí của Binlog &amp; Redo Log trong quá trình</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Thành phần</th>
+          <th>Vai trò</th>
+          <th>Khi ghi</th>
+          <th>Tác dụng chính</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>🧱 <strong>Redo Log</strong></td>
+          <td>Ghi ở mức vật lý (page, block)</td>
+          <td><em>Trước commit (prepare → commit)</em></td>
+          <td>Phục hồi dữ liệu khi crash</td>
+      </tr>
+      <tr>
+          <td>📦 <strong>Binlog</strong></td>
+          <td>Ghi ở mức logic (SQL/row event)</td>
+          <td><em>Sau khi prepare, trước commit redo</em></td>
+          <td>Đồng bộ dữ liệu sang replica</td>
+      </tr>
+  </tbody>
+</table>
+<p>➡️ Hai log này hoạt động song song, được đồng bộ bằng <strong>Two-Phase Commit</strong>, đảm bảo:</p>
+<blockquote>
+<p>Hoặc cả hai cùng ghi thành công → transaction hoàn tất<br>
+Hoặc cả hai rollback → tránh sai lệch Master–Replica.</p></blockquote>
+<hr>
+<h2 id="-4-tóm-tắt-nhanh">🧠 4️⃣ Tóm tắt nhanh</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Nội dung</th>
+          <th>Redo Log</th>
+          <th>Binlog</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ghi bởi</td>
+          <td>InnoDB Engine</td>
+          <td>MySQL Server</td>
+      </tr>
+      <tr>
+          <td>Mục đích</td>
+          <td>Phục hồi sau crash</td>
+          <td>Replication &amp; Backup</td>
+      </tr>
+      <tr>
+          <td>Dạng ghi</td>
+          <td>Thay đổi vật lý</td>
+          <td>Thay đổi logic</td>
+      </tr>
+      <tr>
+          <td>Vòng đời</td>
+          <td>Ngắn (vòng quay)</td>
+          <td>Dài (tuần/tháng)</td>
+      </tr>
+      <tr>
+          <td>Liên quan đến</td>
+          <td>Tính bền vững (Durability)</td>
+          <td>Tính đồng bộ (Consistency)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-kết-luận">✅ Kết luận</h2>
+<ul>
+<li><strong>Binlog</strong> là cầu nối giữa <strong>Master và Replica</strong>, giúp đồng bộ dữ liệu logic.</li>
+<li><strong>Redo Log</strong> đảm bảo dữ liệu <strong>không mất khi crash</strong>.</li>
+<li>Hai log kết hợp thông qua <strong>Two-Phase Commit</strong>, đảm bảo MySQL luôn <strong>an toàn và nhất quán</strong>.</li>
+</ul>
+<hr>
+<h2 id="-tham-khảo--đọc-thêm">📚 Tham khảo &amp; Đọc thêm</h2>
+<ul>
+<li><a href="https://chatgpt.com/share/69083298-6ee4-800f-9dee-246d4f32d2f8"><strong>Binlog trong MySQL - Thảo luận chi tiết</strong></a> - Cuộc trò chuyện về binlog, replication, server-id và các vấn đề thực tế trong production</li>
+</ul>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="../../tags/database">Database</a></li>
+              
+              <li><a href="../../tags/mysql">MySQL</a></li>
+              
+              <li><a href="../../tags/binlog">Binlog</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://www.facebook.com/vu.van.thang.810982/" rel="me" title="Facebook"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#facebook" />
+</svg></a><a class="border"></a><a class="soc" href="https://github.com/thangvd2312/" rel="me" title="GitHub"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+</svg></a><a class="border"></a><a class="soc" href="https://www.linkedin.com/in/thang-vu-b916b6119/" rel="me" title="Linkedin"><svg class="feather">
+   <use href="../../svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#linkedin" />
+</svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>
