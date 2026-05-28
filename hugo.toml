@@ -47,3 +47,8 @@ weight = 3
 name = "Tags"
 url = "/tags"
 weight = 4
+[params.utterances]
+  repo = "thangvd2312/thangvd2312.github.io"
+  issueTerm = "pathname"
+  theme = "github-dark"
+  label = "comment"
