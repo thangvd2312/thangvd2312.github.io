@@ -40,15 +40,8 @@
       {{ end }}
     </div>
 
-    <!-- Disqus -->
-    {{- $.Scratch.Set "isDisqus" true -}}
-    {{ if not .Site.Config.Services.Disqus.Shortname }}
-    {{- $.Scratch.Set "isDisqus" false -}}
-    {{ end }}
-
-    {{- if eq ($.Scratch.Get "isDisqus") true -}}
+    <!-- Comments (Utterances) -->
     {{- partial "comments.html" . -}}
-    {{- end -}}
   </article>
 </main>
 {{ end }}
