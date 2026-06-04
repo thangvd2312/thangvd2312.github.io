@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 320" role="img" aria-labelledby="title desc">
+  <title id="title">UUIDv7 layout</title>
+  <desc id="desc">Simplified UUIDv7 layout showing timestamp first and random bits later.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0f172a}.h{font:800 28px system-ui,Segoe UI,Arial;fill:#f8fafc}.t{font:600 18px system-ui,Segoe UI,Arial;fill:#cbd5e1}.s{font:500 15px system-ui,Segoe UI,Arial;fill:#94a3b8}.ts{fill:#0ea5e9}.ver{fill:#a78bfa}.rand{fill:#22c55e}.box{stroke:#e2e8f0;stroke-width:2}.mono{font:700 17px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#0b1220}.white{fill:#f8fafc}
+    </style>
+  </defs>
+  <rect width="1100" height="320" rx="22" class="bg"/>
+  <text x="550" y="48" text-anchor="middle" class="h">UUIDv7 = thời gian ở đầu + entropy ở sau</text>
+  <text x="550" y="78" text-anchor="middle" class="t">Phần timestamp giúp sort theo thời gian; phần random giúp tránh collision và giảm khả năng đoán ID.</text>
+  <rect x="80" y="130" width="455" height="76" rx="14" class="ts box"/><text x="307" y="175" text-anchor="middle" class="mono">48-bit Unix timestamp (ms)</text>
+  <rect x="545" y="130" width="95" height="76" rx="14" class="ver box"/><text x="592" y="175" text-anchor="middle" class="mono">ver</text>
+  <rect x="650" y="130" width="370" height="76" rx="14" class="rand box"/><text x="835" y="175" text-anchor="middle" class="mono">random / sequence bits</text>
+  <text x="307" y="235" text-anchor="middle" class="s">Tăng theo thời gian → B-tree append tốt hơn</text>
+  <text x="592" y="235" text-anchor="middle" class="s">v7</text>
+  <text x="835" y="235" text-anchor="middle" class="s">Đủ entropy để sinh ID độc lập ở nhiều node</text>
+</svg>
