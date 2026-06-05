@@ -1,0 +1,23 @@
+figure.center {
+  display: block;
+  text-align: center;
+}
+
+.body .mermaid {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 8px;
+  background: rgba(127, 127, 127, 0.06);
+}
+
+.body .mfa-visual {
+  display: block;
+  max-width: 760px;
+  width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 8px;
+}
