@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MFA security guide cover</title>
+  <desc id="desc">A shield, password field, phone OTP, hardware key, and passkey symbols for a multi-factor authentication guide.</desc>
+  <rect width="1200" height="630" fill="#101828"/>
+  <rect x="72" y="70" width="1056" height="490" rx="34" fill="#f8fafc"/>
+  <path d="M600 122l146 52v115c0 106-62 174-146 219-84-45-146-113-146-219V174z" fill="#2563eb"/>
+  <path d="M600 166l100 36v87c0 74-40 123-100 159-60-36-100-85-100-159v-87z" fill="#dbeafe"/>
+  <path d="M566 305l27 27 62-82" fill="none" stroke="#16a34a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="152" y="190" width="250" height="78" rx="16" fill="#111827"/>
+  <circle cx="201" cy="229" r="8" fill="#f8fafc"/>
+  <circle cx="236" cy="229" r="8" fill="#f8fafc"/>
+  <circle cx="271" cy="229" r="8" fill="#f8fafc"/>
+  <circle cx="306" cy="229" r="8" fill="#f8fafc"/>
+  <circle cx="341" cy="229" r="8" fill="#f8fafc"/>
+  <rect x="156" y="334" width="170" height="210" rx="24" fill="#0f172a"/>
+  <rect x="174" y="360" width="134" height="148" rx="12" fill="#ecfeff"/>
+  <text x="241" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#0891b2">482 109</text>
+  <path d="M858 248h118a54 54 0 010 108H858z" fill="#334155"/>
+  <circle cx="976" cy="302" r="24" fill="#f8fafc"/>
+  <rect x="770" y="264" width="116" height="76" rx="16" fill="#f59e0b"/>
+  <circle cx="806" cy="302" r="14" fill="#111827"/>
+  <circle cx="850" cy="302" r="14" fill="#111827"/>
+  <path d="M812 454c0-43 35-78 78-78s78 35 78 78" fill="none" stroke="#7c3aed" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="890" cy="316" r="45" fill="#ede9fe" stroke="#7c3aed" stroke-width="18"/>
+  <text x="600" y="578" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#f8fafc">MFA A-Z for Developers</text>
+</svg>
